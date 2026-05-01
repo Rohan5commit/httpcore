@@ -478,3 +478,4 @@ connection pool properly. (Pull #70)
 ## 0.7.0 (March 5th, 2020)
 
 - First integration with HTTPX.
+
