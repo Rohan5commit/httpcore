@@ -6,13 +6,13 @@
 > *Do one thing, and do it well.*
 
 The HTTP Core package provides a minimal low-level HTTP client, which does
-one thing only. Sending HTTP requests.
+one thing only: sending HTTP requests.
 
 It does not provide any high level model abstractions over the API,
 does not handle redirects, multipart uploads, building authentication headers,
 transparent HTTP caching, URL parsing, session cookie handling,
 content or charset decoding, handling JSON, environment based configuration
-defaults, or any of that Jazz.
+defaults, or any of that jazz.
 
 Some things HTTP Core does do:
 
