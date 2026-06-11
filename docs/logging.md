@@ -17,7 +17,7 @@ logging.basicConfig(
 httpcore.request('GET', 'https://www.example.com')
 ```
 
-Will send debug level output to the console, or wherever `stdout` is directed too...
+Will send debug level output to the console, or wherever `stdout` is directed to...
 
 ```
 DEBUG [2023-01-09 14:44:00] httpcore.connection - connect_tcp.started host='www.example.com' port=443 local_address=None timeout=None
