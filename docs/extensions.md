@@ -278,16 +278,16 @@ with httpcore.stream("GET", url, headers=headers) as response:
         raise Exception("Failed to upgrade to websockets", response)
 
     # Get the raw network stream.
-    network_steam = response.extensions["network_stream"]
+    network_stream = response.extensions["network_stream"]
 
     # Write a WebSocket text frame to the stream.
     ws_connection = wsproto.Connection(wsproto.ConnectionType.CLIENT)
     message = wsproto.events.TextMessage("hello, world!")
     outgoing_data = ws_connection.send(message)
-    network_steam.write(outgoing_data)
+    network_stream.write(outgoing_data)
 
     # Wait for a response.
-    incoming_data = network_steam.read(max_bytes=4096)
+    incoming_data = network_stream.read(max_bytes=4096)
     ws_connection.receive_data(incoming_data)
     for event in ws_connection.events():
         if isinstance(event, wsproto.events.TextMessage):
