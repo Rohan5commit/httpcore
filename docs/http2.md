@@ -149,7 +149,7 @@ The following pseudo-headers are used by HTTP/2 in the request:
 * `:authority` - Equivalent to the `Host` header in HTTP/1.1. In `httpcore` this is represented using the request `Host` header, which is automatically populated from the request URL if no `Host` header is explicitly included.
 * `:scheme` - Taken from the URL of the request.
 
-These pseudo-headers are included in `httpcore` as part of the `request.method` and `request.url` attributes, and through the `request.headers["Host"]` header. *They are not exposed directly by their psuedo-header names.*
+These pseudo-headers are included in `httpcore` as part of the `request.method` and `request.url` attributes, and through the `request.headers["Host"]` header. *They are not exposed directly by their pseudo-header names.*
 
 The one other difference to be aware of is the `Transfer-Encoding: chunked` header.
 
@@ -163,4 +163,4 @@ The following pseudo-header is used by HTTP/2 in the response:
 
 * `:status` - The response status code.
 
-In `httpcore` this *is represented by the `response.status` attribute, rather than being exposed as a psuedo-header*.
+In `httpcore` this *is represented by the `response.status` attribute, rather than being exposed as a pseudo-header*.
